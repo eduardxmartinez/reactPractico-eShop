@@ -6,6 +6,7 @@ import AppContext from '../context/AppContext';
 import menu from "@icons/icon_menu.svg";
 import logo from "@logos/logo_yard_sale.svg";
 import shoppingCart from "@icons/icon_shopping_cart.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Header = () => {
 	const [toggle, setToggle] = useState(false);
@@ -23,7 +24,9 @@ const Header = () => {
         <img src={logo} alt="logo" className="nav-logo" />
         <ul>
           <li>
-            <a href="/">All</a>
+            <a href="/">
+              <Link to="/login">All</Link>
+            </a>
           </li>
           <li>
             <a href="/">Clothes</a>
@@ -47,9 +50,10 @@ const Header = () => {
           <li className="navbar-email" onClick={handleToggle}>
             platzi@example.com
           </li>
-          <li 
-          className="navbar-shopping-cart" 
-          onClick={()=>setToggleOrders(!toggleOrders)}>
+          <li
+            className="navbar-shopping-cart"
+            onClick={() => setToggleOrders(!toggleOrders)}
+          >
             <img src={shoppingCart} alt="shopping cart" />
             {state.cart.length > 0 && <div>{state.cart.length}</div>}
           </li>
