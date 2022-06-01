@@ -6,6 +6,10 @@
 	box-sizing: border-box;
 	position: absolute;
 	right: 0;
+	background-color: var(--white);
+	border: 1px solid var(--very-light-pink);
+	border-radius: 6px;
+	top: 60px;
 }
 .title-container {
 	display: flex;
