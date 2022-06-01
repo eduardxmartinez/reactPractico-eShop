@@ -15,12 +15,12 @@ const Header = () => {
 
 	const handleToggle = () => {
 		setToggle(!toggle);
-    setToggleOrders(toggle);
+    setToggleOrders(false);
 	}
 
   const handleToggleOrders = () => {
     setToggleOrders(!toggleOrders);
-    setToggle(toggleOrders);
+    setToggle(false);
   };
 	return (
     <nav>
@@ -53,9 +53,7 @@ const Header = () => {
           <li className="navbar-email" onClick={handleToggle}>
             platzi@example.com
           </li>
-          <li 
-          className="navbar-shopping-cart" 
-          onClick={setToggleOrders}>
+          <li className="navbar-shopping-cart" onClick={handleToggleOrders}>
             <img src={shoppingCart} alt="shopping cart" />
             {state.cart.length > 0 && <div>{state.cart.length}</div>}
           </li>
