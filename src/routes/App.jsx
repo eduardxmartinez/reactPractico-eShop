@@ -18,25 +18,29 @@ import '@styles/global.css';
 const App = () => {
 	const initialState = useInitialState();
 	return (
-		<AppContext.Provider value={initialState}>
-		<BrowserRouter basename='/reactPractico-eshop'>
-			<Layout>
-				<Routes>
-					<Route exact path="/" element={<Home/>} />
-					<Route exact path="/login" element={<Login/>} />
-					<Route exact path="/password-recovery" element={<PasswordRecovery/>} />
-					<Route exact path="/send-email" element={<SendEmail/>} />
-					<Route exact path="/new-password" element={<NewPassword/>} />
-					<Route exact path="/account" element={<MyAccount/>} />
-					<Route exact path="/signup" element={<CreateAccount/>} />
-					<Route exact path="/checkout" element={<Checkout/>} />
-					<Route exact path="/orders" element={<Orders/>} />
-					<Route path="*" element={<NotFound/>} />
-				</Routes>
-			</Layout>
-		</BrowserRouter>
-		</AppContext.Provider>
-	);
+    <AppContext.Provider value={initialState}>
+      <BrowserRouter basename="/reactPractico-eshop">
+        <Layout>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route
+              exact
+              path="/password-recovery"
+              element={<PasswordRecovery />}
+            />
+            <Route exact path="/send-email" element={<SendEmail />} />
+            <Route exact path="/new-password" element={<NewPassword />} />
+            <Route exact path="/account" element={<MyAccount />} />
+            <Route exact path="/signup" element={<CreateAccount />} />
+            <Route exact path="/checkout" element={<Checkout />} />
+            <Route exact path="/orders" element={<Orders />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </AppContext.Provider>
+  );
 }
 
 export default App;
