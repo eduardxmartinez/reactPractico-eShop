@@ -38,7 +38,7 @@ const Header = () => {
             <a href="/">Toys</a>
           </li>
           <li>
-            <a href="/login">Others login</a>
+            <a href="/">Others</a>
           </li>
         </ul>
       </div>
