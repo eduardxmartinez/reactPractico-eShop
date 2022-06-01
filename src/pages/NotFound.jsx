@@ -1,11 +1,12 @@
 import React from 'react';
+import "@styles/NotFound.scss"
 
 const NotFound = () => {
 	return (
-		<div>
-			No encontrado, error 404.
-		</div>
-	);
+    <div className="notFound">
+      <p>Página no encontrada, error 404.</p>
+    </div>
+  );
 }
 
 export default NotFound;
